@@ -16,5 +16,5 @@
 
 ### HTML
 
-- [문서에 링크 만들기](https://github.com/brad-go/TIL/blob/master/HTML/Link.md) - January 6th, 2022
+- [문서에 링크 만들기](https://github.com/brad-go/TIL/blob/master/HTML/Links.md) - January 6th, 2022
 - [문서에 입력 양식 만들기](https://github.com/brad-go/TIL/blob/master/HTML/Forms.md) - January 6th, 2022
