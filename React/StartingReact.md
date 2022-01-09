@@ -1,4 +1,4 @@
-# React 시작하기
+# [ React ] React 시작하기
 
 ## 목차
 
