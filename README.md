@@ -2,6 +2,13 @@
 
 오늘 배운 내용, 학습한 내용을 기록하는 저장소
 
+## 목차
+
+- [기초](#1-basic)
+- [WEB 기초](#2-front-end)
+- [프레임워크와 라이브러리](#3-frameworks-libraries)
+- [자료구조와 알고리즘](#4-datastructure-algorithm)
+
 ---
 
 :bread: [빵부스러기 저장소](https://github.com/brad-go/TIL/blob/master/BreadCrumbs.md)
@@ -24,3 +31,13 @@
 ### REACT
 
 - [React 시작하기](https://github.com/brad-go/TIL/blob/master/React/StartingReact.md) - January 7th, 2022
+
+## 4. DataStructure & Algorithm
+
+### DataStructure
+
+- [BIG-O 표기법](https://github.com/brad-go/TIL/blob/master/DataStructure&Algorithm/DataStructure/BigO.md) - January 11st, 2022
+
+### Algorithm
+
+- [알고리즘](https://github.com/brad-go/Til/blob/master/DataStructure&Algorithm/Algorithm/Algorithm.md) - January 11st, 2022
