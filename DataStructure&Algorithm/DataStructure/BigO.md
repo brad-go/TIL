@@ -269,7 +269,7 @@ function printNumbers(arr, n) {
 
 ## 참고
 
-[[자료구조] 빅오 표기법(Big-O notation)이란?](https://holika.tistory.com/entry/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EB%B9%85%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95Big-O-notation%EC%9D%B4%EB%9E%80)
-[알고리즘의 시간 복잡도와 Big-O 쉽게 이해하기](https://blog.chulgil.me/algorithm/)
-[예를 들어 설명하는 Big-O 표기법](https://developerinsider.co/big-o-notation-explained-with-examples/)
-[알고리즘의 기초 Big-O Notation과 복잡도(Complextiy)](https://pstudio411.tistory.com/entry/Big-O%EC%99%80-%EB%B3%B5%EC%9E%A1%EB%8F%84Complexity)
+- [[자료구조] 빅오 표기법(Big-O notation)이란?](https://holika.tistory.com/entry/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EB%B9%85%EC%98%A4-%ED%91%9C%EA%B8%B0%EB%B2%95Big-O-notation%EC%9D%B4%EB%9E%80)
+- [알고리즘의 시간 복잡도와 Big-O 쉽게 이해하기](https://blog.chulgil.me/algorithm/)
+- [예를 들어 설명하는 Big-O 표기법](https://developerinsider.co/big-o-notation-explained-with-examples/)
+- [알고리즘의 기초 Big-O Notation과 복잡도(Complextiy)](https://pstudio411.tistory.com/entry/Big-O%EC%99%80-%EB%B3%B5%EC%9E%A1%EB%8F%84Complexity)
