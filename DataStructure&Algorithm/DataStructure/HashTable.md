@@ -1,6 +1,6 @@
 # HashTable (해시 테이블)
 
-![해시테이블](https://media.vlpt.us/images/kimkevin90/post/679a5cc4-7402-43e3-854b-ef3520187cc2/hash%20table.PNG){: align="center"}
+![해시테이블](https://media.vlpt.us/images/kimkevin90/post/679a5cc4-7402-43e3-854b-ef3520187cc2/hash%20table.PNG)
 
 &nbsp;해시 테이블은 **대량의 정보를 저장**하고 **특정 요소에 효율적으로 접근**할 수 있는 복잡한 데이터 구조이다. 이 데이터 구조는 테이블 내에 더 작은 서브 그룹인 **버킷(bucket)** 에 **키/값(key/value) 쌍(pair)** 을 저장한다. 예를 들어 사전과 같다고 볼 수 있다.
 &nbsp;해시 테이블을 키를 저장할 때에 '**해시 함수(Hash Function)**'를 통해 **해시(hash)라는 특정 숫자값으로 변환**하는데, 이는 메모리 공간을 덜 사용할 수 있게 해준다. 해시 테이블은 필요할 때에만 메모리 크기를 늘리고 가능한 한 작은 크기를 유지한다.

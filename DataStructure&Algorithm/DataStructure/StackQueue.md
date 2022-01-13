@@ -8,7 +8,7 @@
 
 ## Stack
 
-<center><img src="https://media.vlpt.us/images/kimkevin90/post/3d7358d4-9585-4605-bcf1-20732984f6ae/stack.png" alt="스택"></center>
+![스택](https://media.vlpt.us/images/kimkevin90/post/3d7358d4-9585-4605-bcf1-20732984f6ae/stack.png)
 
 &nbsp;**스택(Stack)** 은 배열과 마찬가지로 1열로 나열되어 있지만, 배열이 수직으로 쌓여 있는 모습으로 상상해 볼 수 있다. 서류를 쌓아 놓은 경우처럼 **새롭게 추가한 데이터에만 접근할 수 있다.** 새로운 서류가 도착하면 현재 서류 더미의 가장 위에 올려두고 서류를 꺼낼 때는 가장 위에서부터 꺼내는 것과 같다.
 
@@ -39,7 +39,7 @@
 
 ## Queue
 
-<center><img src="https://media.vlpt.us/images/kimkevin90/post/82b66b4b-d6fa-4892-aaae-91807a2465e1/queue.PNG" alt="큐"></center>
+![큐](https://media.vlpt.us/images/kimkevin90/post/82b66b4b-d6fa-4892-aaae-91807a2465e1/queue.PNG)
 
 스택과 마찬가지로 데이터를 1열로 나열한 구조이다. 스택과 비슷하지만 **큐는 추가하는 측과 삭제하는 측이 반대**이다. 큐는 '대기 행렬'이라고도 불린다. 버스를 탈 때 줄을 서는 모습을 상상하면 이해하기 쉽다. 새롭게 온 사람이 가장 뒤에 서며, 가장 앞에 있는 사람부터 버스를 탈 수 있다.
 

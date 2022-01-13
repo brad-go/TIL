@@ -5,7 +5,7 @@
 &nbsp;배열이란 연관된 데이터를 하나의 변수에 그룹핑해서 관리하기 위한 방법이다. 배열을 이용하면 하나의 변수에 여러 정보를 담을 수 있고, 반복문과 결합하면 많은 정보도 효율적으로 처리할 수 있다.
 &nbsp;가장 기본적인 자료구조로 배열을 구성하는 **데이터들이 메모리의 연속된 공간에 순서대로 저장**된다. 배열은 연속된 공간에 저장되어 있어서 부여받은 인덱스를 통해 메모리의 주소를 계산할 수 있다. 즉, **빠르게 데이터에 접근**할 수 있다. 이것을 **Random Access(임의 접근)** 이라고 한다.
 
-<center><img src="./img/arr.png" alt="배열"></center>
+![배열](./img/arr.png)
 
 ### 배열의 장점
 
@@ -28,7 +28,7 @@
 
 &nbsp;주소록이나 친구들 이름을 나열할 때 처럼 나열한 목록을 리스트라고 한다. Linked List는 배열과 달리 메모리상에 index에 의한 물리적 배치를 하지 않고 **참조 시스템을 사용**한다. **노드를 생성 후 해당 노드의 pointer에 의해 다음 노드를 연결**한다. 이를 통해 연결 리스트는 데이터 삽입/삭제시 데이터의 구조를 재정렬하지 않아도 되서 **데이터의 추가나 삭제가 빠르다**. 하지만 원하는 **데이터에 접근**하기 위해서는 처음 데이터부터 거쳐가야 하기 때문에 **시간이 오래 걸리게 된다**.
 
-<center><img src="https://media.vlpt.us/images/kimkevin90/post/fca9e55c-fa9e-485b-a8fb-5fa2766f7c65/linkedlist.PNG" alt="연결리스트"></center>
+![연결 리스트](https://media.vlpt.us/images/kimkevin90/post/fca9e55c-fa9e-485b-a8fb-5fa2766f7c65/linkedlist.PNG)
 
 ### 연결 리스트의 종류
 
@@ -38,7 +38,7 @@
 
 노드가 하나의 링크 필드에 의해 다음 노드와 논리적으로 일렬로 연결된 구조를 단순 연결 리스트라고 한다.
 
-<center><img src="https://media.vlpt.us/images/suitepotato/post/e0bf9775-d7dd-4096-bc40-1eddcfa2576b/image.png" alt="단순 리스트"></center>
+![단순 리스트](https://media.vlpt.us/images/suitepotato/post/e0bf9775-d7dd-4096-bc40-1eddcfa2576b/image.png)
 
 - **이전 노드에 접근하기 위해선 첫 번째 노드부터 다시 순회해야함**
 
@@ -46,7 +46,7 @@
 
 리스트의 마지막 데이터는 포인터를 가지고 있지 않지만, 마지막 데이터의 포인터가 맨 처음을 가리키게 하면 리스트가 원형으로 연결된다.
 
-<center><img src="https://media.vlpt.us/images/suitepotato/post/0104cec3-c9cc-45e8-98d7-01e6477f9420/image.png" alt="단순 리스트"></center>
+![원형 리스트](https://media.vlpt.us/images/suitepotato/post/0104cec3-c9cc-45e8-98d7-01e6477f9420/image.png)
 
 - 마지막 노드와 첫 번째 노드가 연결된 구조
 - **이전 노드에 접근하기 위해서 계속 한 방향으로만 순회하면 된다.**
@@ -56,7 +56,7 @@
 리스트에서 각 데이터가 포인터를 두개씩 가지게 해서 앞뒤 데이터를 가리키도록 한 리스트. 단순 연결 리스트에서 링크가 한 방향으로만 존재해서 앞의 리스트에 접근할 수 없는 문제를 해결하기 위해 등장했다.
 다만 포인터 수가 늘어나므로 데이터 저장을 위한 메모리가 늘어나는 결점과 데이터 추가나 삭제 시에 변경해야 할 포인터가 늘어나는 단점이 있다.
 
-<center><img src="https://media.vlpt.us/images/suitepotato/post/ece98955-1c86-4903-beee-ee5353eceed7/linked_list.png" alt="단순 리스트"></center>
+![이중 연결 리스트](https://media.vlpt.us/images/suitepotato/post/ece98955-1c86-4903-beee-ee5353eceed7/linked_list.png)
 
 - 각 노드가 앞 뒤로 연결됨
 - **이전 노드에 직접 접근 (Direct Access) 가능**
