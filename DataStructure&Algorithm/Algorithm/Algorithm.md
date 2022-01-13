@@ -32,7 +32,10 @@
 ### 시간 복잡도를 나타내는 방법 3가지
 
 1. 평균의 경우: [Big-Θ (빅-세타)]()
+   <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbLQoiN%2Fbtq9NWVsqXj%2FRhFBvlgiGgQYoyIgy6Z1d1%2Fimg.png" alt="bigOmega" width="50%">
 2. 최악의 경우: [Big-O 표기법 (빅오 표기법)](../DataStructure/BigO.md)
+   <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FduHuzf%2Fbtq9OvXMm6V%2FIMpl2hnoPdehynjQKkzFD0%2Fimg.png" alt="bigO" width="50%">
 3. 최상의 경우:[Big-Ω (빅-오메가)]()
+   <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdeNDNM%2Fbtq9JMzS3uW%2FEPZRpwDPeQNO2lke2MxSM1%2Fimg.png" alt="bigOmega" width="50%">
 
 &nbsp;이렇게 크게 3가지 표기법이 있지만 주로 **Big-O 표기법(빅오 표기법)** 을 이용해서 시간 복잡도를 나타낸다.

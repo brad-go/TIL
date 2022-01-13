@@ -37,6 +37,10 @@
 ### DataStructure
 
 - [BIG-O 표기법](https://github.com/brad-go/TIL/blob/master/DataStructure&Algorithm/DataStructure/BigO.md) - January 11st, 2022
+- [자료구조란?](https://github.com/brad-go/TIL/blob/master/DataStructure&Alogrithm/DataStructure/WhatIsDataStructure.md) - January 12nd, 2022
+- [배열과 리스트](./DataStructure&Algorithm/DataStructure/List.md) - January 13rd, 2022
+- [스택과 큐](./DataStructure&Algorithm/DataStructure/StackQueue.md) - January 13rd, 2022
+- [해시 테이블](./DataStructure&Algorithm/DataStructure/HashTable.md) - January 13rd, 2022
 
 ### Algorithm
 
