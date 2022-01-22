@@ -31,6 +31,7 @@
 #### Array
 
 - [배열에서의 중복값](./JavaScript/Array/duplicateValueInArray.md) - January 22nd, 2022
+- [4방향, 8방향 탐색](./JavaScript/Array/directionExplore.md) - January 22nd, 2022
 
 ####
 
