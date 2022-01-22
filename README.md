@@ -28,6 +28,12 @@
 
 ### JavaScript
 
+#### Array
+
+- [배열에서의 중복값](./JavaScript/Array/duplicateValueInArray.md) - January 22nd, 2022
+
+####
+
 - [동기와 비동기](./JavaScript/Sync&Async.md) - January 16th, 2022
 - [콜스택](./JavaScript/Callstack.md) - January 16th, 2022
 - [자바스크립트의 런타임](./JavaScript/Runtime.md) - January 16th, 2022
