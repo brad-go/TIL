@@ -28,11 +28,6 @@
 
 ### JavaScript
 
-#### Array
-
-- [배열에서의 중복값](./JavaScript/Array/duplicateValueInArray.md) - January 22nd, 2022
-- [4방향, 8방향 탐색](./JavaScript/Array/directionExplore.md) - January 22nd, 2022
-
 ####
 
 - [동기와 비동기](./JavaScript/Sync&Async.md) - January 16th, 2022
@@ -60,3 +55,8 @@
 ### Algorithm
 
 - [알고리즘](https://github.com/brad-go/Til/blob/master/DataStructure&Algorithm/Algorithm/Algorithm.md) - January 11st, 2022
+
+#### Array
+
+- [배열에서의 중복값](./DataStructure&Algorithm/Algorithm/Array/duplicateValueInArray.md) - January 22nd, 2022
+- [4방향, 8방향 탐색](./DataStructure&Algorithm/Algorithm/Array/directionExplore.md) - January 22nd, 2022
