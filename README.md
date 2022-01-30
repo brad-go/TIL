@@ -18,6 +18,7 @@
 ### Git & GitHub
 
 - [깃허브 토큰 인증하기](https://github.com/brad-go/TIL/blob/master/Git/AuthenticationWithToken.md) - January 5th, 2022
+- [좋은 커밋 메시지 작성법](./Git/HowToWriteAGitCommitMessage.md)
 - [좋은 README.md 작성을 위한 방법들](./Git/HowToWriteAGoodReadMe.md)
 
 ## 2. FRONT-END
