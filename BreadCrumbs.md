@@ -69,14 +69,23 @@ const StyledH2 = styled.h2`
 온점(.)을 찍고 html태그를 입력하고 백틱(`)기호를 이용해 그 안에 style 작성
 
 ```jsx
-const StyledH2 = styled(h2);
+const StyledH2 = styled(h2)`
+  color: #06f;
+  font-size: 1.45rem;
+`;
 ```
 
 ### @craco/craco
 
+상대 경로가 복잡해질 때 경로를 단순하게 만들어줌
+
 ### sr-only
 
+웹 접근성 관련
+
 ### gitmoji 사용법
+
+git의 커밋메세지에 이모티콘을 사용하게 해준다!
 
 ### git organization
 
