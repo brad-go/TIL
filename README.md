@@ -25,12 +25,11 @@
 - [콜스택](./JavaScript/Callstack.md) - January 16th, 2022
 - [자바스크립트의 런타임](./JavaScript/Runtime.md) - January 16th, 2022
 - [싱글 스레드 언어 자바스크립트](./JavaScript/SingleThreaded.md) - January 16th, 2022
-- [자바스크립트는 왜 비동기일까?](./JavaScript/Async.md) - January 17th, 2022
 
 ### REACT
 
 - [React 시작하기](https://github.com/brad-go/TIL/blob/master/React/StartingReact.md) - January 7th, 2022
-- [React 폴더 및 파일 구조](./React/TheStructureOfReact) - January 31st, 2022
+- [React 폴더 및 파일 구조](./React/TheStructureOfReact.md) - January 31st, 2022
 
 ### DataStructure & Algorithm
 
