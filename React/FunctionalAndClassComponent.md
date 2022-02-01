@@ -213,6 +213,7 @@ export default Counter;
 ```
 
 :white_check_mark: state를 적절하게 사용한다면 해당 컴포넌트 내에서 데이터가 변경될 때 마다 그때그대 변경된 데이터를 UI에서 불러올 수 있기 때문에 적절히 사용하면 매우 유용하다.
+
 :white_check_mark: 함수형 컴포넌트든 클래스형 컴포넌트든 state를 직접 조작하는 것이 아닌, 반드시 setState나 useState와 같은 setter 함수를 사용하여 조작해야 한다.
 
 ### 3. props
