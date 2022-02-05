@@ -347,7 +347,7 @@ export default Counter;
 - 클래스형 컴포넌트는 여러 종류의 `Life Cycle 메서드'를 가지며, 이 메서드를 오버라이딩(상속하여 재정의)하여 특정 시점에 코드가 실행되도록 설정할 수 있다.
 - 함수형 컴포넌트는 훅(Hook)을 사용하여 원하는 시점에 코드를 실행되게 할 수 있다.
 
-![component lifecycle](../assets/ComponentLifeCycle.png)
+![component lifecycle](../assets/react/ComponentLifeCycle.png)
 
 아래부터는 라이프 사이클 메서드를 기준으로 동작 시점을 기술할 것이고, 그에 해당하는 훅(`useEffect()`)의 사용 방법을 작성할 것이다. `useEffect()`의 두번째 인자를 어떻게 넘기는 지 잘 보자!
 

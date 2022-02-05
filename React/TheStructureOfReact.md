@@ -137,7 +137,7 @@ components/
 
 #### 프로젝트 폴더 구조 다른 예시
 
-<img src="../assets/src_structure.png" alt="my src structure" width="30%">
+<img src="../assets/react/src_structure.png" alt="my src structure" width="30%">
 
 이것은 참고로 나와 같이 팀원들이 함께 만들었던 프로젝트의 폴더 구조이다. 이리저리 변형되어서 아토믹 디자인을 참고해서 유사하게 폴더 구조를 잡았다.
 

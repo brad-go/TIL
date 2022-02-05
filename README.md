@@ -61,4 +61,4 @@
 
 #### 회고
 
-- [원티드 2주차 - 개인과제](./ProjectReview/Ggumim.md) - February 5th, 2022
+- [원티드 프리온보딩 프론트엔드 코스 2주차 - 개인과제](./ProjectReview/Ggumim.md) - February 5th, 2022
