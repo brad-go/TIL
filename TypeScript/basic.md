@@ -51,9 +51,68 @@ npm install -g typescript
 - ts파일은 js랑 똑같이 사용가능
 - 하지만 웹 브라우저가 ts 파일을 이해하지 못하기 때문에 js 파일로 변환 작업 필요
 
-#### 5. js 파일로 변환하기
+#### 5. tsconfig.json 파일 만들기
 
-##### 5-1. 수동 변환
+```json
+{
+  "compilerOptions": {
+    "target": "ES6", // .ts 파일을 어떤 버전의 자바스크립트로 바꿔줄지 정하는 부분
+    "module": "CommonJS" // 자바스크립트 파일간 import 문법을 구현할 때 어떤 문법을 쓸지 정하는 곳. common JS는 require 문법. ex2015, exnext는 import 문법을 사용
+  }
+}
+```
+
+- 프로젝트 폴더에 tsconfig.json 파일을 생성
+- 타입스크립트 파일들을 자바스크립트 파일로 변환할 때 어떻게 변환할 것인지 세부설정이 가능하다.
+
+##### 추가로 넣을만한 설정
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "noImplicitAny": true, // any 타입이 의도치않게 발생할 경우 에러를 띄워주는 설정
+    "strictNullChecks": true // null, undefined 타입에 이상한 조작을 하면 에러를 띄우는 설정
+  }
+}
+```
+
+##### tsconfig에 들어갈 기타 항목들
+
+```json
+{
+  "compilerOptions": {
+    "target": "es6", // 'es3', 'es5', 'es2015', 'es2016', 'es2017','es2018', 'es2019', 'es2020','esnext' 가능
+    "module": "commonjs", //무슨 import 문법 쓸건지 'commonjs', 'amd', 'es2015', 'esnext'
+    "allowJs": true, // js 파일들 ts에서 import해서 쓸 수 있는지
+    "checkJs": true, // 일반 js 파일에서도 에러체크 여부
+    "jsx": "preserve", // tsx 파일을 jsx로 어떻게 컴파일할 것인지 'preserve', 'react-native', 'react'
+    "declaration": true, //컴파일시 .d.ts 파일도 자동으로 함께생성 (현재쓰는 모든 타입이 정의된 파일)
+    "outFile": "./", //모든 ts파일을 js파일 하나로 컴파일해줌 (module이 none, amd, system일 때만 가능)
+    "outDir": "./", //js파일 아웃풋 경로바꾸기
+    "rootDir": "./", //루트경로 바꾸기 (js 파일 아웃풋 경로에 영향줌)
+    "removeComments": true, //컴파일시 주석제거
+
+    "strict": true, //strict 관련, noimplicit 어쩌구 관련 모드 전부 켜기
+    "noImplicitAny": true, //any타입 금지 여부
+    "strictNullChecks": true, //null, undefined 타입에 이상한 짓 할시 에러내기
+    "strictFunctionTypes": true, //함수파라미터 타입체크 강하게
+    "strictPropertyInitialization": true, //class constructor 작성시 타입체크 강하게
+    "noImplicitThis": true, //this 키워드가 any 타입일 경우 에러내기
+    "alwaysStrict": true, //자바스크립트 "use strict" 모드 켜기
+
+    "noUnusedLocals": true, //쓰지않는 지역변수 있으면 에러내기
+    "noUnusedParameters": true, //쓰지않는 파라미터 있으면 에러내기
+    "noImplicitReturns": true, //함수에서 return 빼먹으면 에러내기
+    "noFallthroughCasesInSwitch": true //switch문 이상하면 에러내
+  }
+}
+```
+
+#### 6. js 파일로 변환하기
+
+##### 6-1. 수동 변환
 
 ```bash
 tsc 만든파일.ts
@@ -62,7 +121,7 @@ tsc 만든파일.ts
 - 터미널에 tsc 만든파일.ts 입력
 - 만든 ts파일을 js파일로 변환시켜준다.
 
-##### 5-2. 자동 변환
+##### 6-2. 자동 변환
 
 ```bash
 tsc -w
@@ -72,7 +131,7 @@ tsc -w
 
 위 두 방법모두 명령어를 입력하면 만든파일.js 파일이 생길 것이고, ts가 js로 변환되어 이 파일에 저장된다. 작업은 .ts 파일에서 하면된다.
 
-#### 6. 타입스크립트로 작성한 코드 사용하기
+#### 7. 타입스크립트로 작성한 코드 사용하기
 
 ```html
 <script src="변환된파일.js"></script>
