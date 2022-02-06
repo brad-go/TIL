@@ -26,6 +26,10 @@
 - [자바스크립트의 런타임](./JavaScript/Runtime.md) - January 16th, 2022
 - [싱글 스레드 언어 자바스크립트](./JavaScript/SingleThreaded.md) - January 16th, 2022
 
+### TypeScript
+
+- [타입스크립트 기초](./TypeScript/basic.md) - February 6th, 2022
+
 ### REACT
 
 - [React 시작하기](https://github.com/brad-go/TIL/blob/master/React/StartingReact.md) - January 7th, 2022
