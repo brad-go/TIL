@@ -62,7 +62,9 @@
 ### ETC
 
 - [Mock Data](./ETC/MockData.md) - January 30th, 2022
+- [팀프로젝트 세팅](./ProjectReview/TeamProjectSettings.md) - February 9th, 2022
 
 #### 회고
 
 - [원티드 프리온보딩 프론트엔드 코스 2주차 - 개인과제](./ProjectReview/Ggumim.md) - February 5th, 2022
+- [원티드 프리온보딩 프론트엔드 코스 3주차 (월) - 팀과제](./ProjectReview/PartnersDashboard.md) - February 9th, 2022

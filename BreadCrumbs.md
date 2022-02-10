@@ -3,6 +3,17 @@
 > 정리하지 못한 배운 내용들을 담아 놓는 저장소
 > 공부하고 싶은 것들을 담아 놓는 저장소
 
+### json-server로 mock rest-api server 구축하기
+
+https://redux-advanced.vlpt.us/3/01.html
+https://redux-advanced.vlpt.us/3/09.html
+
+### 크라코 설치 및 설정하기
+
+### custom select dropdown 메뉴 만들기
+
+- 블로그 작성
+
 ### 자바스크립트의 return 1 / 5 수
 
 - 함수안에서 return을 사용하면 값을 반환하거나 함수가 종료되는 것을 알고 있었다.
@@ -15,20 +26,6 @@
 - var arr = [][]; 이와 같은 한 번에 2차원 배열 선언이 불가능하다
 - 약간의 트릭을 통하여 2차원 배열과 비슷한 배열을 만들 수 있다
   https://gent.tistory.com/296
-
-### npx와 npm 1 / 7 금
-
-#### npm
-
-- 설치 프로그램이자 패키지 매니저라고 불린다.
-- Node.js를 이용해 만들어진 여러 어플리케이션들을 명령어 환경에서 손쉽게 설치할 수 있게 해준다.
-- Node.js의 앱스토어 같은 느낌으로 볼 수 있다.
-
-### npx
-
-- Node.js를 이용해 만들어진 여러 어플리케이션들을 npm이 설치를 해준다면, npx는 위의 어플리케이션을 단 한 번 임시로 설치하고 지우는 프로그램이다.
-- 컴퓨터의 공간 낭비를 줄여준다.
-- 실행할 때마다 설치해서 항상 최신 상태의 어플리케이션을 사용할 수 있다.
 
 ### React에서 List를 만들 때 항상 key를 사용해야 하는 이유? 1 / 16
 
@@ -75,10 +72,6 @@ const StyledH2 = styled(h2)`
 ### sr-only
 
 웹 접근성 관련
-
-### gitmoji 사용법
-
-git의 커밋메세지에 이모티콘을 사용하게 해준다!
 
 ### git organization
 
