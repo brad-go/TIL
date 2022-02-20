@@ -434,7 +434,7 @@ export default GlobalStyle;
 #### Storybook
 
 ```bash
-npx -p @storybook/cli sb init
+npx sb init
 ```
 
 - storybook 설치

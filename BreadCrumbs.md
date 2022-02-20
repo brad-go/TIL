@@ -3,6 +3,10 @@
 > 정리하지 못한 배운 내용들을 담아 놓는 저장소
 > 공부하고 싶은 것들을 담아 놓는 저장소
 
+### SVG 다루기
+
+### Redux로 메신저 만들기
+
 ### json-server로 mock rest-api server 구축하기
 
 https://redux-advanced.vlpt.us/3/01.html
