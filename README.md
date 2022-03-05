@@ -40,6 +40,10 @@
 
 #### REACT HOOKS
 
+### Redux
+
+- [리덕스 개념정리](./Redux/ConceptOfRedux.md) - March 5th, 2022
+
 ### DataStructure & Algorithm
 
 #### DataStructure
@@ -68,3 +72,4 @@
 
 - [원티드 프리온보딩 프론트엔드 코스 2주차 - 개인과제](./ProjectReview/Ggumim.md) - February 5th, 2022
 - [원티드 프리온보딩 프론트엔드 코스 3주차 (월) - 팀과제](./ProjectReview/PartnersDashboard.md) - February 9th, 2022
+- [원티드 프리온보딩 프론트엔드 코스 3주차 (목) - 팀과제](./ProjectReview/Messenger.md) - February 28th, 2022
