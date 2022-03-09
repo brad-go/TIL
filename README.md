@@ -19,6 +19,8 @@
 
 ### JavaScript
 
+- [명령형 프로그래밍 vs 선언형 프로그래밍](./JavaScript/ProgrammingWay.md) - March 9th, 2022
+
 #### Async
 
 - [동기와 비동기](./JavaScript/Sync&Async.md) - January 16th, 2022
