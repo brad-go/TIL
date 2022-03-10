@@ -20,6 +20,7 @@
 ### JavaScript
 
 - [명령형 프로그래밍 vs 선언형 프로그래밍](./JavaScript/ProgrammingWay.md) - March 9th, 2022
+<!-- - [선언적 프로그래밍과 컴포넌트 추상화](./JavaScript/) -->
 
 #### Async
 
@@ -45,6 +46,10 @@
 ### Redux
 
 - [리덕스 개념정리](./Redux/ConceptOfRedux.md) - March 5th, 2022
+
+### Webpack
+
+- [JavaScript에서 로컬 이미지 사용하기 (웹팩 이미지 경로 설정하기)](./Webpack/SettingImagePath.md) - March 10th, 2022
 
 ### DataStructure & Algorithm
 
