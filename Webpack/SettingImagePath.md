@@ -260,6 +260,26 @@ module.exports = () => ({
 
 정말 오류가 끊이지 않는 과정이었다. 웹팩에 대해 제대로 공부하지 못하고 얼른 프로젝트를 진행하고 싶다보니 지금 한 것이 맞는 방법인지도 모르겠다. 이 프로젝트를 끝내고 웹팩에 대해 제대로 공부해보고 싶다. 지금까지의 결과를 한 눈에 요약하자면 아래와 같다.
 
+### 필요한 패키지
+
+##### webpack 관련
+
+```bash
+npm i -D webpack webpack-cli webpakc-dev-server
+```
+
+##### loader 관련
+
+```bash
+npm i -D css-loader style-loader file-loader
+```
+
+##### plugin 관련
+
+```bash
+npm i -D html-webpack-plugin
+```
+
 ### webpack.config.js
 
 ```js
