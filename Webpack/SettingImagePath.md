@@ -41,7 +41,7 @@
 
 JavaScript에서 컴포넌트 방식으로 구현하기 위해 이러한 마크업 구조를 사용하고 있다. index.js와 그 하위 js 파일에서 모든 다른 html 요소를 생성하고 상태를 관리한다.
 
-## 이미지를 불러오지 못하는 오류
+## 이미지를 불러오지 못하는 오류 발생
 
 ```js
 // Sample.js
@@ -227,15 +227,100 @@ module.exports = () => ({
 });
 ```
 
-두 패키지를 설치하고 위와 같이 webpack.config.js 파일을 수정해주었다.
+두 패키지를 설치하고 위와 같이 webpack.config.js 파일을 수정해주었다. 위에서 발견된 CSS 오류를 해결하려면 두 가지 패키지를 이용해야 하는 것 같았다.
+
+그러나 설정을 마쳤음에도 오류는 사라지지 않았다. 원인은 script 제거 때와 비슷했다. CSS 파일을 html의 `head` 태그 내에 `link`를 통해 연결시켜 사용하는 중이었는데, 이를 제거하고 index.js 파일에 `import` 해줌으로써 해결할 수 있었다.
+
+```js
+// index.js
+import App from "./App.js";
+import "./style.css";
+
+const $app = document.querySelector(".App");
+new App({ $app });
+```
 
 ## mode 설정
 
 ![mode](../assets/webpack/03.png)
 
+CSS 설정까지 마쳐서 이제 잘 되겠거니 했는데, 이번에는 위와 같은 오류가 발생했다. 읽어보니 웹팩을 사용하면서 아직까지 **mode** 설정을 안했다는 거였다. 모드에는 `none`, `development`, `production` 모드가 있는데, 기본값으로는 `production`이 적용된다는 거고 얼른 설정하라는 거였다.
+
+나는 개발 단계에 있고, `production` 모드는 Webpack 모듈 번들링 과정에서 자체적으로 코드를 최적화하여 용량을 줄인다고 하니 일단 `development` 모드를 사용하기로 했고 다음과 같이 설정해줌으로 해결할 수 있었다.
+
 ```js
 // webpack.config.js
 module.exports = () => ({
-
   mode: "development",
+  // ...생략
+});
+```
+
+## 정리
+
+정말 오류가 끊이지 않는 과정이었다. 웹팩에 대해 제대로 공부하지 못하고 얼른 프로젝트를 진행하고 싶다보니 지금 한 것이 맞는 방법인지도 모르겠다. 이 프로젝트를 끝내고 웹팩에 대해 제대로 공부해보고 싶다. 지금까지의 결과를 한 눈에 요약하자면 아래와 같다.
+
+### webpack.config.js
+
+```js
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = () => ({
+  mode: "development",
+  // 진입 경로
+  entry: "./src/index.js",
+  // 결과물
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+  module: {
+    rules: [
+      // css를 적용하기 위해 import 하려면 필요
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      // 파일 로더 설정
+      {
+        test: /\.(png|jpg|svg|gif)$/i,
+        use: {
+          loader: "file-loader",
+        },
+      },
+    ],
+  },
+  // // html 파일을 화면에 보여주기 위해
+  plugins: [new HtmlWebpackPlugin({ template: "./index.html" })],
+});
+```
+
+### html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sample Project</title>
+  </head>
+  <body>
+    <main class="App"></main>
+  </body>
+</html>
+```
+
+여기서 스크립트와 CSS를 연결하지 않는다!
+
+### index.js
+
+```js
+import App from "./App.js";
+import "./style.css";
+
+const $app = document.querySelector(".App");
+new App({ $app });
 ```
