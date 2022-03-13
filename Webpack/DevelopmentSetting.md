@@ -41,13 +41,14 @@ npm i -D webpack webpack-cli webpack-dev-server html-webpack-plugin
 
 ```json
 scripts: {
-  // 웹팩을 적용해 배포를 위한 빌드 파일을 생성한다. 배포 시에 모드가 development면 필요없는 코드가 포함되기 때문에 최적화된 파일로 만들기 위해 production 모드 사용
   "build": "webpack --mode production",
-  // 웹팩 개발 서버를 열어준다.
   "start": "webpack serve --open",
   "test": "echo \"Error: no test specified\" && exit 1"
 }
 ```
+
+- **build**: 웹팩을 적용해 배포를 위한 빌드 파일을 생성한다. 배포 시에 모드가 development면 필요없는 코드가 포함되기 때문에 최적화된 파일로 만들기 위해 production 모드 사용
+- **start**: 웹팩이 적용된 개발 서버를 열어준다. 뒤에 `--mode development`를 붙여서 개발 모드로 열어도 됨.
 
 ### webpack.config.js 생성
 
