@@ -40,7 +40,7 @@ npm i -D webpack webpack-cli webpack-dev-server html-webpack-plugin
 ### package.json 수정
 
 ```json
-scripts: {
+"scripts": {
   "build": "webpack --mode production",
   "start": "webpack serve --open",
   "test": "echo \"Error: no test specified\" && exit 1"
