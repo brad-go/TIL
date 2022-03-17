@@ -104,7 +104,7 @@ const arr = [1, 2, 3, 3, 3, 3, 4, 4];
 
 const result = {};
 arr.forEach((item) => {
-  result[item] = result[item || 0] + 1;
+  result[item] = (result[item] || 0) + 1;
 });
 console.log(result);
 ```
