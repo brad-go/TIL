@@ -80,11 +80,88 @@ console.log(diary.title, diary.date); // Today's diary 2022-3-18
 
 이렇게 **생성자를 사용하지 않고, 정적 메서드를 사용하여 인스턴스화 하는 디자인 패턴**이다. 즉, 공장(팩토리)처럼 하나의 객체를 이용하여 반복적으로 반환하여 재사용할 때, 정적 메서드가 매우 편리하게 활용된다고 한다.
 
+## 정적 팩토리 메서드를 사용하는 이유
+
+### 1. 이름을 가질 수 있다.
+
+객체는 생성 목적과 과정에 따라 생성자를 구별해서 사용할 필요가 있다. `new` 라는 키워드를 통해 객체를 생성하는 생성자는 내부 구조를 잘 알고 있어야 목적에 맞게 객체를 생성할 수 있다. 하지만 정적 팩토리 메서드를 사용하면 메서드 이름에 객체의 생성 목적을 담아낼 수 있다.
+
+```tsx
+class Diary {
+  constructor(title, date) {
+    this.title = title;
+    this.date = date;
+  }
+  static createDiary() {
+    const date = new Date();
+    return new this(
+      "Today's diary",
+      `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+    );
+  }
+  static createParticularDateDiary(date) {
+    return new this(
+      "Today's diary",
+      `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+    );
+  }
+}
+
+const diary = Diary.createDiary();
+console.log(diary.title, diary.date); // Today's diary 2022-3-18
+
+const particularDateDiary = Diary.createParticularDateDiary(
+  new Date("2022-04-16")
+);
+console.log(particularDateDiary.title, particularDateDiary.date);
+// Today's diary 2022-4-16
+```
+
+`createDiary`와 `createParticularDateDiary` 모두 새로운 일기를 생성하고 반환하는 정적 팩토리 메서드이다. 메서드의 이름만 봐도 일기를 생성하는지, 특정 일의 일기를 생성하는지 이해할 수 있다. 이처럼 정적 팩토리 메서드를 사용하면 **해당 객체 생성의 목적을 이름에 표현할 수 있어 가독성이 좋아지는 효과**가 있다.
+
+### 2. 호출할 때마다 새로운 객체를 생성할 필요가 없다.
+
+빈 일기장 여러개를 만들어야 한다고 해보자. 일반적으로 생성자를 사용한다면 다음과 같이 만들 수 있다.
+
+```tsx
+const diary = new Diary("Today's diary", new Date());
+```
+
+위와 같이 new 연산자를 통해서 객체를 매번 생성해서 사용해야 한다. 하지만 동일한 객체를 사용한다면 static을 통해 하나의 객체로 반복적으로 반환하여 활용할 수 있다.
+
+```tsx
+const diary = Diary.createDiary();
+```
+
+### 3. 캡슐화를 통해 내부 로직을 숨길 수 있다.
+
+```tsx
+class Diary {
+  constructor(title, date) {
+    this.title = title;
+    this.date = date;
+  }
+  static createDiary() {
+    const date = new Date();
+    return new this(
+      "Today's diary",
+      `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+    );
+  }
+}
+
+const diary = Diary.createDiary();
+console.log(diary.title, diary.date); // Today's diary 2022-3-18
+```
+
+다음과 같이 static을 통해 객체를 생성하지만 createDiary()의 로직이 어떻게 구성되어있는지 모르게 할 수 있다.
+
 ## 정리
 
 - 객체 생성을 캡슐화하는 기법이다.
 - static 메서드로 객체 생성을 캡슐화 한다.
 - 객체를 생성하는 메서드를 만들고, `static`으로 선언하는 기법이다.
+- 주로 생성자를 여러번 반복적으로 사용하여 새로운 객체를 계속 생성하는 번거로움 등을 해소하고자 할 때 사용한다.
 
 ## 참고
 
