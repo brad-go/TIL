@@ -21,7 +21,7 @@
 
 - [배열 객체에서 중복값 제거하기](./JavaScript/RemoveOverlap.md) - March 12nd, 2022
 - [명령형 프로그래밍 vs 선언형 프로그래밍](./JavaScript/ProgrammingWay.md) - March 9th, 2022
-<!-- - [선언적 프로그래밍과 컴포넌트 추상화](./JavaScript/) -->
+- [익명 함수를 사용하는 이유](./JavaScript/AnonymousFunction.md) - March 19th, 2022
 
 #### Async
 
