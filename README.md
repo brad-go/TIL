@@ -38,6 +38,7 @@
 ### TypeScript
 
 - [타입스크립트 기초](./TypeScript/basic.md) - February 6th, 2022
+- [타입스크립트 단독 실행하기](./TypeScript/RunTypeScript.md) - May 15th, 2022
 
 ### REACT
 
