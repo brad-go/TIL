@@ -33,7 +33,8 @@
 
 #### Pattern
 
-- [정적 팩토리 메서드](./JavaScript/StaticFactoryMethod.md) - March 18th, 2022
+- [정적 팩토리 메서드](./Pattern/StaticFactoryMethod.md) - March 18th, 2022
+- [초기화 지연](./Pattern/LazyInitialization.md) - May 17th, 2022
 
 ### TypeScript
 
