@@ -19,6 +19,7 @@
 
 ### JavaScript
 
+- [자바스크립트란?](./JavaScript/WhatIsJavaScript.md) - May 30th, 2022
 - [배열 객체에서 중복값 제거하기](./JavaScript/RemoveOverlap.md) - March 12nd, 2022
 - [명령형 프로그래밍 vs 선언형 프로그래밍](./JavaScript/ProgrammingWay.md) - March 9th, 2022
 - [익명 함수를 사용하는 이유](./JavaScript/AnonymousFunction.md) - March 19th, 2022
