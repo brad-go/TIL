@@ -283,3 +283,8 @@ console.log(obj2); // { a: 0, b: { c: 0 } }
 - [immutable.js](https://immutable-js.com/) 사용하기
 
 [⬆ Back to top](#목차)
+
+## 참고
+
+- [holymoly.jun님 블로그](https://velog.io/@jun094/JS-%EA%B0%9D%EC%B2%B4-%EB%B0%B0%EC%97%B4-%EB%B3%B5%EC%82%AC-%ED%95%98)
+- [HANAMON님 블로그](https://hanamon.kr/javascript-shallow-copy-deep-copy/)
