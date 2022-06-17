@@ -20,6 +20,7 @@
 ### JavaScript
 
 - [자바스크립트란?](./JavaScript/WhatIsJavaScript.md) - May 30th, 2022
+- [문자열 잘라내기 slice() vs substring()](./JavaScript/stringSlicing.md) - June 18th, 2022
 - [배열 객체에서 중복값 제거하기](./JavaScript/RemoveOverlap.md) - March 12nd, 2022
 - [객체와 배열의 복사 (얕은복사와 깊은 복사)](./JavaScript/CopyingObjectsAndArrays.md) - June 8th, 2022
 - [명령형 프로그래밍 vs 선언형 프로그래밍](./JavaScript/ProgrammingWay.md) - March 9th, 2022
@@ -43,10 +44,8 @@
 - [React 시작하기](https://github.com/brad-go/TIL/blob/master/React/StartingReact.md) - January 7th, 2022
 - [React를 사용하는 이유](./React/WhyReact.md) - February 1st, 2022
 - [React 폴더 및 파일 구조](./React/TheStructureOfReact.md) - January 31st, 2022
-
 - [좋은 컴포넌트 설계](./React/ComponentDesign.md) - January 31st, 2022
 - [함수형 컴포넌트와 클래스형 컴포넌트](./React/FunctionalAndClassComponent.md) - February 1st, 2022
-
 - [리액트에서 좋은 코드](./React/CleanCodeReact.md) - April 12nd, 2022
 
 #### REACT HOOKS
