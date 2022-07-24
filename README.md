@@ -37,6 +37,8 @@
 #### OOP
 
 - [자바스크립트의 객체](./JavaScript/OOP/Object.md) - July 18th, 2022
+- [자바스크립트의 프로토타입](./JavaScript/OOP/Prototype.md) - July 22nd, 2022
+- [자바스크립트의 클래스](./JavaScript/OOP/Class.md) - July 24th, 2022
 
 ### TypeScript
 
