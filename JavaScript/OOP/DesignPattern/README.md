@@ -13,6 +13,7 @@
 #### 생성 패턴
 
 - [팩토리 메서드 패턴(Factory Method Pattern)](./FactoryMethod/)
+- [추상 팩토리 패턴(Abstract Factory Pattern)](./AbstractFactory/)
 
 #### 구조 패턴
 
