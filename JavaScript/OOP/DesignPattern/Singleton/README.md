@@ -101,7 +101,7 @@ function clientCode() {
 clientCode(); // 싱글톤이 동작합니다. 두 변수에는 같은 인스턴스가 담겨 있습니다.
 ```
 
-- [다른 예시 1](./printer.ts);
+- [다른 예시 1](./printer.ts)
 - [다른 예시 2](./cart.ts)
 
 ## 언제 사용해야할까?
