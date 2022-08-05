@@ -453,3 +453,4 @@ createRequest(requestDirector);
 
 - [Builder in TypeScript](https://refactoring.guru/design-patterns/builder/typescript/example)
 - [빌더 패턴(Builder Pattern)](https://dev-youngjun.tistory.com/197)
+- [빌더 패턴(Builder Pattern)](https://dev-momo.tistory.com/entry/%EB%B9%8C%EB%8D%94-%ED%8C%A8%ED%84%B4-Builder-Pattern)
