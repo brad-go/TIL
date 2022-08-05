@@ -15,6 +15,8 @@
 - [팩토리 메서드 패턴(Factory Method Pattern)](./FactoryMethod/)
 - [추상 팩토리 패턴(Abstract Factory Pattern)](./AbstractFactory/)
 - [빌더 패턴(Builder Pattern)](./Builder/)
+- [프로토타입 패턴(Prototype Pattern)](./Prototype/);
+- [싱글톤 패턴(Singleton Pattern)](./Singleton/)
 
 #### 구조 패턴
 
