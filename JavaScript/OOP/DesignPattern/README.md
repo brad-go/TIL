@@ -4,19 +4,19 @@
 
 ### 패턴이란?
 
-- [디자인 패턴이란?](https://www.notion.so/Design-Pattern-be5c2addc0d14f49a58bc4c20643a41b)
-- [패턴을 배워야 하는 이유](https://www.notion.so/Design-Pattern-be5c2addc0d14f49a58bc4c20643a41b)
-- [패턴의 분류](https://www.notion.so/Design-Pattern-be5c2addc0d14f49a58bc4c20643a41b)
+- [디자인 패턴이란?](#디자인-패턴이란)
+- [패턴을 배워야 하는 이유](#패턴을-배워야-하는-이유)
+- [패턴의 분류](#패턴의-분류)
 
 ### 디자인 패턴의 분류
 
 #### 생성 패턴
 
-- [팩토리 메서드 패턴(Factory Method Pattern)](./FactoryMethod/)
-- [추상 팩토리 패턴(Abstract Factory Pattern)](./AbstractFactory/)
-- [빌더 패턴(Builder Pattern)](./Builder/)
-- [프로토타입 패턴(Prototype Pattern)](./Prototype/)
-- [싱글톤 패턴(Singleton Pattern)](./Singleton/)
+- [팩토리 메서드 패턴(Factory Method Pattern)](./Creational/FactoryMethod/)
+- [추상 팩토리 패턴(Abstract Factory Pattern)](./Creational/AbstractFactory/)
+- [빌더 패턴(Builder Pattern)](./Creational/Builder/)
+- [프로토타입 패턴(Prototype Pattern)](./Creational/Prototype/)
+- [싱글톤 패턴(Singleton Pattern)](./Creational/Singleton/)
 
 #### 구조 패턴
 
