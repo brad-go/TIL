@@ -64,6 +64,7 @@
 #### 구조 패턴의 종류
 
 - [어댑터 패턴(Adapter Pattern)](./Structural/Adapter/)
+- [브릿지 패턴(Bridge Pattern)](./Structural/Bridge/)
 
 [⬆ Back to top](#목차)<br />
 
