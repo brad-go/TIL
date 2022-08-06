@@ -1,0 +1,207 @@
+# 브릿지 패턴(Bridge Pattern)
+
+브릿지 패턴은 가교 패턴이라고도 부르며 **큰 클래스 또는 밀접하게 관련된 클래스들을 서로 독립적으로 개발할 수 있는 두 개의 계층(추상화 및 구현 계층)으로 분할해주는 구조적 디자인 패턴입**니다.
+
+### 문제
+
+추상화나 구현이 직접적으로 와닿지 않을겁니다. 그러므로 예를 들어서 한 번 생각해보죠. 한 쌍의 하위 클래스 `Circle`과 `Square`가 있는 기하학적인 클래스 `Shape`가 있다고 가정합니다. 색상을 통합하기 위해 이 클래스의 계층을 확장하기를 원한다면, 하위 클래스로 `Red`와 `Blue`을 만들 수 있습니다. 그러나 이미 두 하위클래스가 있기 때문에, `BlueCircle`및 `RedCircle`과 같은 4개의 클래스 조합을 생성해야 한다는 문제가 있습니다.
+
+결과적으로 계층 구조에 새로운 모양 유형과 색상을 추가하면 **클래스 조합의 수는 기하급수적으로 증가한다**는 문제를 가지게 됩니다. 예를 들어, 삼각형 모양을 추가하려면 각 색상에 대해 하나씩 두 개의 하위 클래스를 도입해야 합니다. 그리고 그 후에 새 색상을 추가하려면 각 모양의 유형에 대해 하나씩 세 개의 하위 클래스를 만들어야 합니다.
+
+### 해결책
+
+이 문제는 클래스 상속과 관련된 매우 일반적인 문제로 모양과 색상의 두 가지 독립적인 차원에서 `Shape` 클래스를 확장하려고 하기 때문에 발생합니다.
+
+브릿지 패턴은 상속에서 객체 **합성(composition)** 으로 전환하여 이 문제를 해결합니다. 합성(composition)이란 **관점 중 하나를 별도의 클래스 계층 구조로 추출하여 원래 클래스가 모든 상태와 동작을 한 클래스 내에 두는 대신 새로운 계층의 객체를 참조하도록 하는 것**입니다.
+
+> **합성(Composition)**
+>
+> 기존 클래스를 확장하는 대신, **새로운 클래스를 만들고 private 필드로 기존 클래스의 인스턴스를 참조하는 방법을 통해 기능을 확장**시키는 것이다.
+>
+> 새로운 클래스의 인스턴스 메서드들은 **private 필드로 참조하는 기존 클래스의 대응하는 메서드(forwarding method)를 호출해 그 결과를 반환**하며, 이를 **forwarding(전달)** 이라고 한다.
+> 이를 통해 새로운 클래스는 기존 클래스의 내부 구현 방식의 영향에서 벗어날 수 있으며, 기존 클래스에 새로운 메서드가 추가되더라도 전혀 영향을 받지 않는다.
+> 최근에는 상속보다는 합성을 사용하는 것이 더 좋은 프로그래밍 방법으로 여겨지고 있다.
+
+이 접근 방식에 따라 색상 관련 코드를 두 개의 하위 클래스 Red 및 Blue가 있는 새로운 클래스로 추출할 수 있습니다. 그런 다음 클래스는 `Color` 객체 중 하나를 가리키는 참조 필드를 가져옵니다. 이제 `Shape`은 연결된 `Color` 객체에 색상 관련 작업을 위임할 수 있습니다. 즉, 해당 참조는 `Shape`과 `Color` 클래스 사이에 **다리(Bridge)** 역할을 합니다. 이제부터 새 색상을 추가할 때 `Shape` 계층 구조를 변경할 필요가 없으며, 그 반대의 경우도 마찬가지입니다.
+
+### 추상화(Abstraction) 및 구현(Implementation) 계층
+
+**추상화(인터페이스라고도 부름)** 는 일부 [엔티티](http://wiki.hash.kr/index.php/%EC%97%94%ED%8B%B0%ED%8B%B0)에 대한 상위 수준의 제어 계층입니다. 이 레이어는 자체적으로 실제 작업을 수행해서는 안됩니다. 이 레이어는 작업을 **구현(플랫폼이라고도 부름)** 레이어에게 위임해야 합니다.
+
+여기에서는 추상화 계층이나 구현 계층은 프로그래밍 언어의 인터페이스나 추상 클래스에 대해 이야기 하는 것이 아닙니다.
+
+실제 소프트웨어에 대해 이야기할 때, 추상화 계층은 GUI(그래픽 사용자 인터페이스)로 나타낼 수 있으며, 구현 계층은 GUI 계층이 사용자와의 상호 작용에 대한 응답을 호출하는 기본 운영체제 코드(API)를 말합니다.
+
+일반적으로 이러한 앱을 두 가지 독립적인 방향으로 확장할 수 있습니다.
+
+- 여러 다른 GUI(예: 일반 고객 또는 관리자용으로 만들기)
+- 여러 다른 API 지원(예: Window, Linux 및 macOS에서 앱이 실행되게 만들기)
+
+최악의 시나리오에서 이 앱은 수백 개의 조건부가 코드 전체에서 다양한 API와 다양한 유형의 GUI를 연결하는 거대한 스파게티 코드로 이루어져 있을 수 있습니다.
+
+특정 인터페이스-플랫폼 조합과 관련된 코드를 별도의 클래스로 추출하여 이 혼란 속에 질서를 부여할 수 있습니다. 그러나 곧 이러한 클래스가 많다는 것을 알게될 것이고, 새로운 GUI를 추가하거나 다른 API를 지원하려면 더 많은 클래스를 만들어야 하기 때문에 클래스 계층은 기하급수적으로 증가하게 될 것입니다.
+
+브릿지 패턴으로 이 문제를 해결한다고 하면 클래스를 두 개의 계층으로 나눠야 합니다.
+
+- **추상화(Abstraction) 계층**: 앱의 GUI 계층
+- **구현(Implementaion) 계층**: 운영 체제의 API
+
+  **추상화 객체는 연결된 구현 객체에 실제 작업을 위임하여 앱의 모양을 제어**합니다. 동일한 GUI가 Windows 및 Linux에서 작동할 수 있도록 공통 인터페이스를 따르게 하고, 서로 다른 구현을 상호 교환할 수 있게 합니다.
+
+따라서 API 관련 클래스를 건드리지 않고, GUI 클래스를 변경할 수 있습니다. 또한 **다른 운영체제에 대한 지원을 추가하려면 구현 계층 구조에서 하위 클래스를 생성**하기만 하면 됩니다.
+
+## 구조
+
+![https://refactoring.guru/images/patterns/diagrams/bridge/structure-en-indexed-2x.png](https://refactoring.guru/images/patterns/diagrams/bridge/structure-en-indexed-2x.png)
+
+[출처: [https://refactoring.guru/images/patterns/diagrams/bridge/structure-en-indexed-2x.png](https://refactoring.guru/images/patterns/diagrams/bridge/structure-en-indexed-2x.png)]
+
+1. **추상화(Abstraction)**: 높은 수준의 제어 논리를 담당합니다. 실제 저수준 작업을 수행하기 위해서는 구현(Implementation) 객체에 의존합니다.
+2. **구현(Implementation)**: 모든 구체적인 구현에 공통적인 인터페이스를 말합니다. 추상화는 여기에 선언된 메서드를 통해서만 구현 객체와 통신할 수 있습니다.
+   추상화 클래스는 구현 인터페이스와 동일한 메서드를 나열할 수 있지만, 일반적으로 추상화 클래스는 구현 인터페이스에 의해 선언된 다양한 기본 작업에 의존하는 몇 가지 복잡한 동작을 선언합니다.
+3. **구체적인 구현(Concrete Implementations)**: 플랫폼별 코드가 포함됩니다.
+4. **정제된 추상화(Refined abstraction)**: 추상화 클래스를 구체화한 클래스로 제어 논리의 변형을 가능하게 합니다. 부모(추상화 클래스)와 마찬가지로 일반 구현 인터페이스를 통해 다른 구현부와 작업을 합니다.
+5. 대개 클라이언트는 관심사를 추상화 클래스를 통해 작업하는 것에 둡니다. 그러나 클라이언트의 일은 추상화 객체를 다른 구현 객체와 연결하는 일입니다.
+
+## 예시 코드
+
+```tsx
+/**
+ * 브릿지 패턴은 비즈니스 로직이나 거대한 클래스를 독립적으로 개발할 수 잇는 별도의
+ * 클래스 계층으로 나누는 구조적 디자인 패턴입니다.
+ *
+ * 이러한 계층 중 하나(종종 추상화라고 함)는 두 번째 계층(구현 계층)의 객체에 대한 참조를
+ * 가집니다. 추상화 계층은 호출의 일부(혹은 대부분)를 구현 객체에 위임할 수 있습니다. 모든
+ * 구현 계층은 공통 인터페이스를 가지므로 추상화 계층 내에서 상호 교환이 가능합니다.
+ *
+ * 플랫폼 간 앱을 처리하거나 여러 유형의 데이터베이스 서버를 지원하거나 특정 종류(클라우드,
+ * 플랫폼, 소셜 네트워크 등)의 여러 API 공급자와 작업할 때 유용합니다.
+ */
+
+/**
+ * 추상화 계층에는 두 클래스 계층의 "제어" 부분에 대한 인터페이스를 정의합니다. 구현 계층의
+ * 객체에 대한 참조를 유지 관리하고 모든 실제 작업을 이 객체에 위임합니다.
+ */
+class Abstraction {
+  constructor(protected implementation: Implementation) {}
+
+  operation(): string {
+    const result = this.implementation.operationImplementation();
+    return `Aabstraction: Base operation with:\n${result}`;
+  }
+}
+
+/**
+ * 구현 계층의 클래스들의 변경 없이 추상화 계층을 확장할 수 있습니다.
+ * 추상화 계층의 인터페이스와 일치할 필요는 없습니다.
+ * 사실, 두 인터페이스들은 완전히 다를 수 잇습니다. 대체적으로 구현 인터페이스는
+ * 원시적인 동작을 제공하는 반면에, 추상 계층에는 이 원시적인 동작들을 기반으로 한
+ * 고수준의 동작들을 정의합니다.
+ */
+class ExtendAbstraction extends Abstraction {
+  operation(): string {
+    const result = this.implementation.operationImplementation();
+    return `ExtendedAbstraction: Extended operation with:\n${result}`;
+  }
+}
+
+/**
+ * 구현 계층에는 모든 구현 클래스들을 위한 인터페이스를 정의합니다.
+ */
+interface Implementation {
+  operationImplementation(): string;
+}
+
+/**
+ * 각 구체적인 구현 클래스는 특정한 플랫폼과 일치하고 플랫폼의 API를 사용하여
+ * 구현 인터페이스를 구현합니다.
+ */
+class ConcreteImplementaionA implements Implementation {
+  operationImplementation(): string {
+    return `ConcreteImplementationA: Here\'s the result on the platform A.`;
+  }
+}
+
+class ConcreteImplementaionB implements Implementation {
+  operationImplementation(): string {
+    return `ConcreteImplementationB: Here\'s the result on the platform B.`;
+  }
+}
+
+/**
+ * 추상화 객체가 특정 구현 객체와 연결되는 초기화 단계를 제외하고 클라이언트 코드는
+ * 추상화 클래스에 의존해야 합니다.이러한 방식으로 클라이언트 코드는 모든 추상화-
+ * 구현 조합을 지원합니다.
+ */
+function clientCode(abstraction: Abstraction) {
+  // ...
+  console.log(abstraction.operation());
+  // ...
+}
+
+/**
+ * 클라이언트 코드는 어떤 사전 설정된 추상화-구현 조합과도 함께 동작이 가능해야 합니다.
+ */
+let implementation = new ConcreteImplementaionA();
+let abstraction = new Abstraction(implementation);
+clientCode(abstraction);
+
+console.log("");
+
+implementation = new ConcreteImplementaionB();
+abstraction = new ExtendAbstraction(implementation);
+clientCode(abstraction);
+
+// Aabstraction: Base operation with:
+// ConcreteImplementationA: Here's the result on the platform A.
+
+// ExtendedAbstraction: Extended operation with:
+// ConcreteImplementationB: Here's the result on the platform B.
+```
+
+- [다른 예시 1](./remote.ts)
+- [다른 예시 2](./hunt.ts)
+
+## 언제 사용해야할까?
+
+- **일부 기능의 여러 변경이 있는 하나의 거대한 클래스를 분할하고 합성하려는 경우**(예: 클래스가 당양한 데이터베이스 서버에서 작동할 수 있는 경우) 브릿지 패턴을 사용합니다.
+  브릿지 패턴을 통해 거대한 클래스를 여러 클래스 계층으로 분할할 수 있고, 다른 계층의 클래스와 독립적으로 각 계층의 클래스를 변경할 수 있습니다. 이를 통해 유지보수를 용이하게하고, 기존 코드가 손상될 위험을 최소화 해줍니다.
+- **여러 독립적인 관점에서 클래스를 확장해야 할 때** 브릿지 패턴을 사용합니다. 각 관점에 대해 별도의 클래스 계층을 추출하고, 원래 클래스는 모든 작업을 자체적으로 수행하는 대신 해당 계층에 속한 객체에게 관련 작업을 위임합니다.
+- **런타임에서 동적으로 구현부를 전환해야 하는 경우** 브릿지 패턴을 사용합니다. 선택 사항이지만, 브릿지 패턴을 사용하면 추상화 계층 내부의 구현 객체를 손쉽게 변경할 수 있습니다.
+
+## 구현 방법
+
+1. 클래스에서 독립적인 관점을 가진 개념을 찾습니다. 이 독립적인 개념은 추상화/플랫폼, 도메인/인프라, 프론트엔드/백엔드 또는 인터페이스/구현이 될 수 있습니다.
+2. 클라이언트가 필요로 하는 작업을 확인하고 최상위 추상화 클래스에 동작을 정의합니다.
+3. 모든 플랫폼에서 사용할 수 있는 작업을 결정합니다. 구현 인터페이스에서 추상화 계층에 필요한 것들을 선언합니다.
+4. 도메인의 모든 플랫폼에 대해 구체적인 구현 클래스를 생성하고 모두 구현 인터페이스를 따르는지 확인합니다.
+5. 추상화 클래스 내에서 구현 타입에 대한 참조 필드를 추가합니다. 추상화 클래스는 대부분의 작업을 해당 필드에서 참조되는 구현 객체에 위임합니다.
+6. 높은 수준을 가진 논리의 변형이 여러 개 있는 경우 최상위 추상화 클래스를 확장하여 각 변형에 대해 정제된 추상화 클래스(하위 클래스로 확장)를 만듭니다.
+7. 클라이언트 코드는 구현 객체를 추상화 클래스의 생성자에 전달하여 다른 객체와 연결합니다. 그 후에 클라이언트는 구현 객체와 상관없이 추상화 객체로만 작업을 수행할 수 있습니다.
+
+## 장점과 단점
+
+### 장점
+
+- [플랫폼](https://subokim.wordpress.com/2013/01/31/platform-story/)에 독립적인 클래스 및 앱을 만들 수 있습니다.
+- 클라이언트 코드는 플랫폼의 세부 정보에 노출되지 않고, 높은 수준의 추상화 클래스와 함께 동작합니다.
+- **추상화 계층과 구현 계층은 독립적으로 확장**이 가능하므로 **개방 폐쇄의 원칙**을 준수합니다.
+- 추상 계층에서는 높은 수준의 논리, 구현 계층에서는 플랫폼의 세부 사항에 집중할 수 있으므로 **단일 책임 원칙을 준수**합니다. 즉, 각 도메인 논리에 집중할 수 있습니다.
+- **런타임 환경에서 유연하게 동작**할 수 있습니다. (런타임에서 어떤 구현체를 사용할지 결정할 수 있으므로)
+- **상속을 통한 기하급수적인 클래스의 증가를 수평적으로 문제를 해결**할 수 있습니다.
+
+### 단점
+
+- 응집도가 높은 클래스에 패턴을 적용하면 코드가 더 복잡해질 수 있습니다.
+
+## 다른 패턴과의 관계
+
+- 브릿지 패턴은 일반적으로 사전에 설계되어 서로 독립적으로 응용 프로그램의 일부를 개발할 수 있습니다. 반면에 [어댑터 패턴](https://www.notion.so/Adapter-Pattern-1ce7fce07b2a4c28a1dd10d4938b9ccd)은 일반적으로 기존 앱과 함게 사용되어 호환되지 않는 일부 클래스가 잘 동작하도록 해줍니다.
+- [브릿지](https://www.notion.so/Bridge-Pattern-f903402a355b40848c3ea44a5f00075c), 상태, 전략(및 [어댑터 패턴](https://www.notion.so/Adapter-Pattern-1ce7fce07b2a4c28a1dd10d4938b9ccd))은 매우 유사한 구조를 가지고 있습니다. 실제로 이러한 모든 패턴은 작업을 다른 객체에 위임하는 구성을 기반으로 합니다. 그러나 그들은 모두 다른 문제를 해결합니다.
+- [브릿지 패턴](https://www.notion.so/Bridge-Pattern-f903402a355b40848c3ea44a5f00075c)과 함께 [추상 팩토리 클래스](https://www.notion.so/Design-Pattern-be5c2addc0d14f49a58bc4c20643a41b)를 사용할 수 있습니다. 이것은 브릿지에서 정의한 일부 추상화 클래스가 특정 구현 클래스에서 동작할 수 있는 경우에만 가능합니다. 추상 팩토리는 이러한 관계를 캡슐화하고 클라이언트 코드에서 복잡성을 숨길 수 있습니다.
+- [빌더](https://www.notion.so/Builder-Pattern-1b84a9252ac046078a4015bfa595ee82)와 [브릿지](https://www.notion.so/Bridge-Pattern-f903402a355b40848c3ea44a5f00075c)를 결합할 수 있습니다. 감독 클래스는 추상화 역할을 하고 다른 빌더는 구현 역할을 합니다.
+
+## 참고
+
+- [Bridge](https://refactoring.guru/design-patterns/bridge)
+- [Bridge Pattern](https://velog.io/@mdy0102/tt87pywj)
