@@ -190,11 +190,11 @@ clientCode(director);
 
 ## 다른 패턴과의 관계
 
-- 많은 소프트웨어 설계가 [팩토리 메서드](https://www.notion.so/Factory-Method-Pattern-f0a1138581944526a922f939b297a2cf)(덜 복잡하고 하위 클래스를 통해 사용자 정의가 가능)를 사용하기 시작해서 [추상 팩토리](https://www.notion.so/Abstract-Factory-Pattern-98bb3de4a21942b4b470e34394b6f468), [프로토타입](../Prototype/) 또는 [빌더](https://www.notion.so/Builder-Pattern-1b84a9252ac046078a4015bfa595ee82)(더 유연하지만 복잡함)로 발전합니다.
-- [빌더](https://www.notion.so/Builder-Pattern-1b84a9252ac046078a4015bfa595ee82)는 복잡한 객체를 단계별로 구성하는 데 중점을 둡니다. [추상 팩토리](https://www.notion.so/Abstract-Factory-Pattern-98bb3de4a21942b4b470e34394b6f468)는 관련 객체의 연관성에 중점을 둡니다. 추상 팩토리는 제품을 즉시 반환하지만, 빌더를 사용하면 제품을 가져오기 전에 몇 가지 추가 구성 단계를 실행할 수 있습니다.
-- 재귀적으로 작동하도록 구성 단계를 프로그래밍할 수 있으므로, 복잡한 합성 트리를 만들 때 사용할 수 있습니다.
-- [빌더](https://www.notion.so/Builder-Pattern-1b84a9252ac046078a4015bfa595ee82)와 브릿지를 결합할 수 있습니다. 감독 클래스는 추상화 역할을 하고 다른 빌더는 구현 역할을 합니다.
-- [추상 팩토리 클래스](https://www.notion.so/Design-Pattern-be5c2addc0d14f49a58bc4c20643a41b), [빌더](https://www.notion.so/Builder-Pattern-1b84a9252ac046078a4015bfa595ee82) 및 프로토타입 패턴은 모두 [싱글톤](../Singleton/) 패턴으로 구현될 수 있습니다.
+- 많은 소프트웨어 설계가 [팩토리 메서드](../FactoryMethod/)(덜 복잡하고 하위 클래스를 통해 사용자 정의가 가능)를 사용하기 시작해서 [추상 팩토리](../AbstractFactory/), [프로토타입](../Prototype/) 또는 [빌더](../Builder/)(더 유연하지만 복잡함)로 발전합니다.
+- [빌더](../Builder/)는 복잡한 객체를 단계별로 구성하는 데 중점을 둡니다. [추상 팩토리](../AbstractFactory/)는 관련 객체의 연관성에 중점을 둡니다. 추상 팩토리는 제품을 즉시 반환하지만, 빌더를 사용하면 제품을 가져오기 전에 몇 가지 추가 구성 단계를 실행할 수 있습니다.
+- [빌더](../Builder/) 패턴에서 재귀적으로 작동하도록 구성 단계를 프로그래밍할 수 있으므로, 복잡한 [컴포지트](../../Structural/Composite/) 트리를 만들 때 사용할 수 있습니다.
+- [빌더](../Builder/)와 [브릿지](../../Structural/Bridge/)를 결합할 수 있습니다. 감독 클래스는 추상화 역할을 하고 다른 빌더는 구현 역할을 합니다.
+- [추상 팩토리 클래스](../AbstractFactory/), [빌더](../Builder/) 및 프로토타입 패턴은 모두 [싱글톤](../Singleton/) 패턴으로 구현될 수 있습니다.
 
 ## 참고
 
