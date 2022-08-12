@@ -135,8 +135,8 @@ clientCode(); // 싱글톤이 동작합니다. 두 변수에는 같은 인스턴
 
 ## 다른 패턴과의 관계
 
-- 대부분의 경우 Facade 패턴은 단일 퍼사드 객체로 충분하기 때문에 [싱글톤](https://www.notion.so/Singleton-Pattern-9e6d45cff1e34428a7b6fdd8d5de8199)으로 변환될 수 있습니다.
-- 플라이웨이트 패턴은 객체의 모든 공유 상태를 단 하나의 플라이웨이트 객체로 줄일 수 있다면, 싱글톤과 비슷할 수 있습니다. 하지만 두 가지 차이가 있습니다.
+- 대부분의 경우 [퍼사드](../../Structural/Facade/) 패턴은 단일 퍼사드 객체로 충분하기 때문에 [싱글톤](https://www.notion.so/Singleton-Pattern-9e6d45cff1e34428a7b6fdd8d5de8199)으로 변환될 수 있습니다.
+- [플라이웨이트](../../Structural/Flyweight/) 패턴은 객체의 모든 공유 상태를 단 하나의 플라이웨이트 객체로 줄일 수 있다면, [싱글톤](../Singleton/)과 비슷할 수 있습니다. 하지만 두 가지 차이가 있습니다.
   1. 단 하나의 싱글톤 인스턴스가 있어야 하는 반면, 플라이웨이트 클래스는 고유 상태가 다른 여러 인스턴스를 가질 수 있습니다.
   2. 싱글톤 객체는 변경할 수 있지만, 플라이웨이트 객체는 변경할 수 없습니다.
 - [추상 팩토리 클래스](https://www.notion.so/Design-Pattern-be5c2addc0d14f49a58bc4c20643a41b), [빌더](https://www.notion.so/Builder-Pattern-1b84a9252ac046078a4015bfa595ee82) 및 [프로토타입](https://www.notion.so/Prototype-Pattern-9ed885596b184d9aaae4984b0569e73f) 패턴은 모두 [싱글톤](https://www.notion.so/Singleton-Pattern-9e6d45cff1e34428a7b6fdd8d5de8199) 패턴으로 구현될 수 있습니다.
