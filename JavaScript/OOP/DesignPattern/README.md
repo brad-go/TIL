@@ -69,6 +69,7 @@
 - [데코레이터 패턴(Decorator Pattern)](./Structural/Decorator/)
 - [퍼사드 패턴(Facade Pattern)](./Structural/Facade/)
 - [플라이웨이트 패턴(Flyweight Pattern)](./Structural/Flyweight/)
+- [프록시 패턴(Proxy Pattern)](./Structural/Proxy/)
 
 [⬆ Back to top](#목차)<br />
 
