@@ -47,6 +47,7 @@
 - [자바스크립트의 객체지향 프로그래밍](./JavaScript/OOP/OOPinJavaScript.md) - July 27th, 2022
 - [자바스크립트의 SOLID](./JavaScript/OOP/SOLID.md) - August 2nd, 2022
 - [자바스크립트의 디자인 패턴](./JavaScript/OOP/DesignPattern/) - August 3rd-4th, 2022
+- [자바스크립트의 객체지향 생활체조](./JavaScript/OOP/ObjectCalisthenics.md) - November 18th, 2022
 
 ### TypeScript
 
