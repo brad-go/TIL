@@ -19,6 +19,7 @@
 - [명령형 프로그래밍 vs 선언형 프로그래밍](./JavaScript/ProgrammingWay.md) - March 9th, 2022
 - [변수](./JavaScript/variable.md) - January 26th, 2023
 - [표현식과 문](./JavaScript/ExpressionAndStatement.md) - January 27th, 2023
+- [데이터 타입](./JavaScript/DataType.md) - January 30th, 2023
 
 #### String
 
