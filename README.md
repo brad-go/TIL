@@ -23,6 +23,7 @@
 - [연산자](./JavaScript/Operator.md) - January 31st, 2023
 - [제어문](./JavaScript/ControlFlowStatement.md) - February 1st, 2023
 - [타입변환과 단축평가](./JavaScript/TypeConversionAndShortCircuitEvalutation.md) - February 2nd, 2023
+- [객체 리터럴](./JavaScript/ObjectLiteral.md) - February 6th, 2023
 
 #### String
 
