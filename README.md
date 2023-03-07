@@ -6,6 +6,12 @@
 
 :bread: [빵부스러기 저장소](https://github.com/brad-go/TIL/blob/master/BreadCrumbs.md)
 
+## Series
+
+- [디자인 패턴](./Series/DesignPattern/README.md) - August 3rd-4th, 2022
+- [객체지향 생활체조](./Series/ObjectCalisthenics.md) - November 18th, 2022
+- [JavaScript Deep Dive](./Series/JavaScriptDeepDive/README.md) - January 26th ~ March 7th, 2023
+
 ## Language
 
 ### HTML
@@ -17,13 +23,6 @@
 
 - [자바스크립트란?](./JavaScript/WhatIsJavaScript.md) - May 30th, 2022
 - [명령형 프로그래밍 vs 선언형 프로그래밍](./JavaScript/ProgrammingWay.md) - March 9th, 2022
-- [변수](./JavaScript/variable.md) - January 26th, 2023
-- [표현식과 문](./JavaScript/ExpressionAndStatement.md) - January 27th, 2023
-- [데이터 타입](./JavaScript/DataType.md) - January 30th, 2023
-- [연산자](./JavaScript/Operator.md) - January 31st, 2023
-- [제어문](./JavaScript/ControlFlowStatement.md) - February 1st, 2023
-- [타입변환과 단축평가](./JavaScript/TypeConversionAndShortCircuitEvalutation.md) - February 2nd, 2023
-- [객체 리터럴](./JavaScript/ObjectLiteral.md) - February 6th, 2023
 
 #### String
 
@@ -53,8 +52,6 @@
 - [자바스크립트의 클래스](./JavaScript/OOP/Class.md) - July 24th, 2022
 - [자바스크립트의 객체지향 프로그래밍](./JavaScript/OOP/OOPinJavaScript.md) - July 27th, 2022
 - [자바스크립트의 SOLID](./JavaScript/OOP/SOLID.md) - August 2nd, 2022
-- [자바스크립트의 디자인 패턴](./JavaScript/OOP/DesignPattern/) - August 3rd-4th, 2022
-- [자바스크립트의 객체지향 생활체조](./JavaScript/OOP/ObjectCalisthenics.md) - November 18th, 2022
 
 ### TypeScript
 
