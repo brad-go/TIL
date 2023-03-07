@@ -53,6 +53,10 @@
 - [자바스크립트의 객체지향 프로그래밍](./JavaScript/OOP/OOPinJavaScript.md) - July 27th, 2022
 - [자바스크립트의 SOLID](./JavaScript/OOP/SOLID.md) - August 2nd, 2022
 
+#### Performance Optimization
+
+- [V8 엔진의 Hidden Class](./JavaScript/hiddenClass.md) - March 8th, 2022
+
 ### TypeScript
 
 - [타입스크립트 기초](./TypeScript/basic.md) - February 6th, 2022
