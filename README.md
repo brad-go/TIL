@@ -10,7 +10,7 @@
 
 - [디자인 패턴](./Series/DesignPattern/README.md) - August 3rd-4th, 2022
 - [객체지향 생활체조](./Series/ObjectCalisthenics.md) - November 18th, 2022
-- [JavaScript Deep Dive](./Series/JavaScriptDeepDive/README.md) - January 26th ~ March 7th, 2023
+- [JavaScript Deep Dive](./Series/JavaScriptDeepDive/README.md) - January 26th ~ March 31st, 2023
 
 ## Language
 

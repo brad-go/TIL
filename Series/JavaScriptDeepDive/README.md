@@ -12,3 +12,4 @@
 9. [타입변환과 단축평가](./typeConversionAndShortCircuitEvalutation.md)
 10. [객체 리터럴](./objectLiteral.md)
 11. [원시 값과 객체의 비교](./primitiveAndObject.md)
+12. [함수](./function.md)
